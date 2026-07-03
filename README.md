@@ -39,6 +39,12 @@ Ensure your appsettings.json file is located in the root directory of your proje
 
 ### 3. CSV File format
 The application expects a CSV file using a semicolon (;) separator, Position field is optional and supports empty values.
+The first row must contain the exact headers followed by the data rows:
+```text
+FirstName;LastName;Position;Country;Salary;HireDate
+Jan;Kowalski;QA Engineer;Poland;7777,77;2022-01-01
+Mariusz;Nowak;;Poland;5555,00;2023-02-02
+```
 
 ## Commands:
 - import - Wipes the target table and imports all records from the configured CSV file.
